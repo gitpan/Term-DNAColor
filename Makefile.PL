@@ -32,7 +32,7 @@ my %WriteMakefileArgs = (
     'Term::ANSIColor' => '0',
     'utf8' => '0'
   },
-  'VERSION' => '0.110211',
+  'VERSION' => '0.110212',
   'test' => {
     'TESTS' => 't/*.t'
   }
