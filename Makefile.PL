@@ -9,7 +9,7 @@ use ExtUtils::MakeMaker 6.31;
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'Add colors to DNA and RNA sequences',
+  'ABSTRACT' => 'Add colors to DNA and RNA sequences in terminal output',
   'AUTHOR' => 'Ryan C. Thompson <rct@thompsonclan.org>',
   'BUILD_REQUIRES' => {
     'Carp' => '0',
@@ -32,7 +32,7 @@ my %WriteMakefileArgs = (
     'Term::ANSIColor' => '0',
     'utf8' => '0'
   },
-  'VERSION' => '0.110210',
+  'VERSION' => '0.110211',
   'test' => {
     'TESTS' => 't/*.t'
   }

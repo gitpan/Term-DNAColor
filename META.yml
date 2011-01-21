@@ -1,5 +1,5 @@
 ---
-abstract: 'Add colors to DNA and RNA sequences'
+abstract: 'Add colors to DNA and RNA sequences in terminal output'
 author:
   - 'Ryan C. Thompson <rct@thompsonclan.org>'
 build_requires:
@@ -27,4 +27,4 @@ requires:
 resources:
   homepage: http://github.com/DarwinAwardWinner/Term-DNAColor/tree
   repository: git://github.com/DarwinAwardWinner/Term-DNAColor.git
-version: 0.110210
+version: 0.110211

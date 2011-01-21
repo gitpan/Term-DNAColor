@@ -1,8 +1,8 @@
 NAME
-    Term::DNAColor - Add colors to DNA and RNA sequences
+    Term::DNAColor - Add colors to DNA and RNA sequences in terminal output
 
 VERSION
-    version 0.110210
+    version 0.110211
 
 SYNOPSIS
         use Term::DNAColor;
@@ -10,9 +10,9 @@ SYNOPSIS
         print colordna("ATCGGTCNNNTAGCTGAN"), "\n";
 
 DESCRIPTION
-    This module mainly provides a function, "colordna", that takes a DNA
-    sequence and wraps unambiguous nucleotides in ANSI color codes, so that
-    you can print the sequence to a terminal and have it come out colored.
+    This module provides a function, "colordna", that takes a DNA sequence
+    and wraps unambiguous nucleotides in ANSI color codes, so that you can
+    print the sequence to a terminal and have it come out colored.
 
 FUNCTIONS
   colordna
