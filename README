@@ -2,7 +2,7 @@ NAME
     Term::DNAColor - Add colors to DNA and RNA sequences in terminal output
 
 VERSION
-    version 0.110212
+    version 0.110230
 
 SYNOPSIS
         use Term::DNAColor;

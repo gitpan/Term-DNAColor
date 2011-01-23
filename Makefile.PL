@@ -17,6 +17,7 @@ my %WriteMakefileArgs = (
     'File::Find' => '0',
     'File::Temp' => '0',
     'Scalar::Util' => '0',
+    'Term::ANSIColor' => '2.01',
     'Test::More' => '0.94',
     'perl' => '5.004'
   },
@@ -32,7 +33,7 @@ my %WriteMakefileArgs = (
     'Term::ANSIColor' => '0',
     'utf8' => '0'
   },
-  'VERSION' => '0.110212',
+  'VERSION' => '0.110230',
   'test' => {
     'TESTS' => 't/*.t'
   }

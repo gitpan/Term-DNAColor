@@ -8,6 +8,7 @@ build_requires:
   File::Find: 0
   File::Temp: 0
   Scalar::Util: 0
+  Term::ANSIColor: 2.01
   Test::More: 0.94
   perl: 5.004
 configure_requires:
@@ -27,4 +28,4 @@ requires:
 resources:
   homepage: http://github.com/DarwinAwardWinner/Term-DNAColor/tree
   repository: git://github.com/DarwinAwardWinner/Term-DNAColor.git
-version: 0.110212
+version: 0.110230

@@ -4,7 +4,7 @@ use utf8;
 
 package Term::DNAColor;
 BEGIN {
-  $Term::DNAColor::VERSION = '0.110212';
+  $Term::DNAColor::VERSION = '0.110230';
 }
 # ABSTRACT: Add colors to DNA and RNA sequences in terminal output
 
@@ -49,7 +49,7 @@ Term::DNAColor - Add colors to DNA and RNA sequences in terminal output
 
 =head1 VERSION
 
-version 0.110212
+version 0.110230
 
 =head1 SYNOPSIS
 
