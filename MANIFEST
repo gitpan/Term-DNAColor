@@ -12,7 +12,7 @@ t/000-report-versions.t
 t/author-critic.t
 t/colordna.t
 t/colorrna.t
-t/printcolordna.t
+t/lib/Test/RandomDNASeq.pm
 t/release-has-version.t
 t/release-kwalitee.t
 t/release-pod-coverage.t

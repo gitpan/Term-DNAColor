@@ -4,12 +4,12 @@ use utf8;
 
 package Term::DNAColor;
 BEGIN {
-  $Term::DNAColor::VERSION = '0.110230';
+  $Term::DNAColor::VERSION = '0.110460';
 }
 # ABSTRACT: Add colors to DNA and RNA sequences in terminal output
 
 use base 'Exporter::Simple';
-use Term::ANSIColor qw(color);
+use Term::ANSIColor::Print;
 
 sub _get_nucl_color {
     my $nucl_colors = {
@@ -19,17 +19,31 @@ sub _get_nucl_color {
         C => 'blue',
         G => 'yellow',
     };
-    return color($nucl_colors->{$_[0]} || 'reset') . color('bold');
+    return $nucl_colors->{$_[0]} || 'normal';
 }
 
-sub _wrap_nucl_in_color {
-    return _get_nucl_color($_[0]) . $_[0] . color('reset');
+my $colorizer = Term::ANSIColor::Print->new(
+    output => 'return',
+    eol    => '',
+);
+
+sub _colorize_nucl {
+    my $nucl = $_[0];
+    my $color = "bold_" . _get_nucl_color($nucl);
+    my $colored_nucl = $colorizer->$color($nucl);
+    return $colored_nucl;
 }
+
+# Optional Memoize support
+eval {
+    require Memoize;
+    Memoize::memoize('_colorize_nucl');
+};
 
 
 sub colordna : Exported {
     my @seq_chars = split //, shift;
-    my @colored_seq_chars = map { _wrap_nucl_in_color($_) } @seq_chars;
+    my @colored_seq_chars = map { _colorize_nucl($_) } @seq_chars;
     return join "", @colored_seq_chars;
 }
 
@@ -49,7 +63,7 @@ Term::DNAColor - Add colors to DNA and RNA sequences in terminal output
 
 =head1 VERSION
 
-version 0.110230
+version 0.110460
 
 =head1 SYNOPSIS
 
@@ -99,7 +113,8 @@ This function is exported by default.
 
 =head2 colorrna
 
-This is simply an alias for C<colordna>. Unlike C<colordna>, it is not
+This is simply an alias for C<colordna>. Both C<colordna> and
+C<colorrna> will highlight U for uracil. Unlike C<colordna>, it is not
 exported by default, but only by request.
 
 =head1 BUGS AND LIMITATIONS

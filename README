@@ -2,7 +2,7 @@ NAME
     Term::DNAColor - Add colors to DNA and RNA sequences in terminal output
 
 VERSION
-    version 0.110230
+    version 0.110460
 
 SYNOPSIS
         use Term::DNAColor;
@@ -34,8 +34,9 @@ FUNCTIONS
     This function is exported by default.
 
   colorrna
-    This is simply an alias for "colordna". Unlike "colordna", it is not
-    exported by default, but only by request.
+    This is simply an alias for "colordna". Both "colordna" and "colorrna"
+    will highlight U for uracil. Unlike "colordna", it is not exported by
+    default, but only by request.
 
 BUGS AND LIMITATIONS
     Colors are not configurable.
